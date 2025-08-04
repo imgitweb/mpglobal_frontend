@@ -1,6 +1,6 @@
 /* Hero Section - Enhanced Styling */
 .mp-hero {
-  color: var(--mp-white);
+ color: var(--mp-white);
   padding: 220px 0 100px;
   position: relative;
   overflow: hidden;
@@ -36,7 +36,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(0.5) saturate(1.2); /* Better contrast with richer colors */
+ filter: brightness(0.5) saturate(1.2);/* Better contrast with richer colors */
   transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1), transform 8s ease-in-out;
   opacity:.0;
   transform: scale(1);
@@ -75,7 +75,7 @@
 .nav-dot.active {
   background-color: var(--mp-white);
   transform: scale(1.3);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 15px var(--mp-blue-glow);
 }
 
 .nav-dot:hover {
@@ -105,7 +105,7 @@
 .hero-content-wrapper {
   position: relative;
   padding-left: 25px;
-  border-left: 4px solid var(--mp-light-gold, #FFCC66);
+   border-left: 4px solid var(--mp-accent);
   animation: fadeIn 1s ease-out;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .hero-title .highlight {
-  color: var(--mp-light-gold, #FFCC66);
+  color: var(--mp-accent);
   position: relative;
   display: inline-block;
 }
@@ -148,7 +148,7 @@
   left: 0;
   width: 100%;
   height: 8px;
-  background-color: var(--mp-dark-brown, #692e04);
+  background-color: var(--mp-dark-brown);
   opacity: 0.5;
   border-radius: 4px;
   z-index: -1;
@@ -167,7 +167,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.95);
   max-width: 620px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   transition: opacity 0.5s ease;
@@ -194,36 +194,36 @@
 }
 
 .hero-buttons .mp-btn-primary {
-  color: #5D2906;
-  background: linear-gradient(135deg, #FFF, #F0F0F0);
-  border: 2px solid #FFF;
+  color: var(--mp-dark-brown);
+  background: linear-gradient(135deg, var(--mp-white), #f0f0f0);
+  border: 2px solid var(--mp-white);
 }
 
 .hero-buttons .mp-btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  background: #FFF;
-  color: #5D2906;
+  background: var(--mp-white);
+  color: var(--mp-dark-brown);
 }
 
 .hero-buttons .mp-btn-secondary {
-  color: #FFF;
+  color: var(--mp-white);
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
 .hero-buttons .mp-btn-secondary:hover {
-  background: #FFF;
+  background: var(--mp-white);
+  color: var(--mp-dark-brown);
   border-color: #FFF;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  color: #5D2906;
 }
 
 /* Hero Badge */
 .hero-badge {
   position: relative;
-  background: rgba(255, 255, 255, 0.15);
+   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 25px;
@@ -242,7 +242,7 @@
 
 .badge-icon {
   font-size: 2.5rem;
-  color: var(--mp-light-gold, #FFCC66);
+  color: var(--mp-accent);
 }
 
 .badge-text {
@@ -259,7 +259,7 @@
 .badge-value {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #FFF;
+   color: var(--mp-white);
 }
 
 /* Art Pattern Bottom (Enhanced) */
@@ -269,10 +269,10 @@
   left: 0;
   width: 100%;
   height: 18px;
-  background-image: repeating-linear-gradient(
+ background-image: repeating-linear-gradient(
     45deg,
-    var(--mp-medium-brown, #8B4513),
-    var(--mp-medium-brown, #8B4513) 12px,
+    var(--mp-medium-brown),
+    var(--mp-medium-brown) 12px,
     transparent 12px,
     transparent 24px
   );
@@ -293,7 +293,7 @@
   height: 300px;
   bottom: -150px;
   right: 10%;
-  background: radial-gradient(circle, var(--mp-light-gold, #FFCC66), transparent 70%);
+  background: radial-gradient(circle, var(--mp-accent), transparent 70%);
   animation: pulse 8s infinite alternate;
 }
 
@@ -302,7 +302,7 @@
   height: 200px;
   top: 20%;
   left: -100px;
-  background: radial-gradient(circle, var(--mp-light-gold, #FFCC66), transparent 70%);
+  background: radial-gradient(circle, var(--mp-accent), transparent 70%);
   animation: pulse 6s infinite alternate-reverse;
 }
 
@@ -319,7 +319,7 @@
   height: 180px;
   top: 15%;
   right: 10%;
-  background-image: url('../../assets/images/tribal-pattern.png'); /* Add a tribal pattern asset */
+  background-image: url('../../assets/images/tribal-pattern.png');
   animation: slowRotate 20s linear infinite;
 }
 

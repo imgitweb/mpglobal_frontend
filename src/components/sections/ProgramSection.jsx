@@ -6,7 +6,7 @@ const ProgramSection = () => {
       number: 1,
       title: "District Discovery & Selection",
       duration: "1 month",
-      color: "#5D2906",
+      color: "#191478",
       icon: "fas fa-map-marked-alt",
       sections: [
         {
@@ -33,7 +33,7 @@ const ProgramSection = () => {
       number: 2,
       title: "Global Readiness Acceleration",
       duration: "1 month",
-      color: "#8B5A2B",
+      color: "#0408f8",
       icon: "fas fa-rocket",
       sections: [
         {
@@ -62,7 +62,7 @@ const ProgramSection = () => {
       number: 3,
       title: "ODOP Mega Conclave & Awards",
       duration: "1 week",
-      color: "#A0522D",
+      color: "#051151",
       icon: "fas fa-award",
       sections: [
         {
