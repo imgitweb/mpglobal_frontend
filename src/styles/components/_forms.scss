@@ -11,7 +11,7 @@
 .apply-decoration-dot {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(93, 41, 6, 0.1);
+  background-color: var(--mp-light-bg);
   z-index: 1;
 }
 
@@ -50,14 +50,14 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #8B5A2B;
+  color: var(--mp-dark-brown);
   margin-bottom: 10px;
 }
 
 .apply-section h2 {
   font-size: 2.8rem;
   font-weight: 800;
-  color: #5D2906;
+  color: var(--mp-light-bg);
   margin-bottom: 15px;
 }
 
@@ -81,7 +81,7 @@
 .apply-divider {
   width: 80px;
   height: 3px;
-  background: #5D2906;
+  background: var(--mp-dark-brown);
   margin: 20px auto;
   position: relative;
 }
@@ -92,7 +92,7 @@
   position: absolute;
   height: 3px;
   width: 15px;
-  background: #5D2906;
+  background: var(--mp-dark-brown);
   top: -6px;
 }
 
@@ -140,7 +140,7 @@
 .apply-icon {
   width: 70px;
   height: 70px;
-  background-color: #5D2906;
+  background-color: var(--mp-light-bg);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -200,15 +200,15 @@
   padding: 12px 15px;
   border-radius: 8px;
   background-color: #FFF;
-  color: #5D2906;
+  color: var(--mp-light-bg);
   font-size: 16px;
   transition: all 0.3s ease;
 }
 
 .form-control:focus, 
 .form-select:focus {
-  border-color: #5D2906;
-  box-shadow: 0 0 0 3px rgba(93, 41, 6, 0.1);
+  border-color: var(--mp-light-bg);
+  box-shadow:  0 15px 50px rgba(5, 17, 81, 0.2);
   outline: none;
 }
 
@@ -260,13 +260,13 @@
 }
 
 .form-check-input:checked {
-  background-color: #5D2906;
-  border-color: #5D2906;
+  background-color: var(--mp-light-bg);
+  border-color: var(--mp-light-bg);;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
 }
 
 .form-check-input:focus {
-  border-color: #5D2906;
+  border-color: var(--mp-light-bg);
   box-shadow: 0 0 0 3px rgba(93, 41, 6, 0.1);
   outline: none;
 }
@@ -279,7 +279,7 @@
 }
 
 .form-check-label a {
-  color: #5D2906;
+  color: var(--mp-light-bg);
   font-weight: 600;
   text-decoration: none;
   position: relative;
@@ -292,7 +292,7 @@
   height: 1px;
   bottom: -1px;
   left: 0;
-  background-color: #5D2906;
+  background-color: var(--mp-light-bg);
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease;
@@ -305,7 +305,7 @@
 
 /* Submit Button */
 .apply-btn {
-  background-color: #5D2906;
+  background-color: var(--mp-light-bg);
   color: white;
   border: none;
   border-radius: 50px;
@@ -340,7 +340,7 @@
 .apply-btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(93, 41, 6, 0.3);
-  background-color: #4A2003;
+  background-color: var(--mp-light-bg);
   color: white;
 }
 
@@ -386,13 +386,13 @@
 
 .success-icon i {
   font-size: 40px;
-  color: #5D2906;
+  color: var(--mp-light-bg);
 }
 
 .apply-success-alert h4 {
   font-size: 24px;
   font-weight: 700;
-  color: #5D2906;
+  color: var(--mp-light-bg);;
   margin-bottom: 15px;
 }
 
@@ -407,8 +407,8 @@
 
 .reset-btn {
   background-color: transparent;
-  color: #5D2906;
-  border: 2px solid #5D2906;
+  color: var(--mp-light-bg);;
+  border: 2px solid var(--mp-light-bg);;
   border-radius: 50px;
   padding: 10px 25px;
   font-size: 16px;
@@ -418,7 +418,7 @@
 }
 
 .reset-btn:hover {
-  background-color: #5D2906;
+  background-color: var(--mp-light-bg);;
   color: white;
 }
 
@@ -440,7 +440,7 @@
   flex: 1;
   min-width: 200px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 4px solid #5D2906;
+  border-top: 4px solid var(--mp-light-bg);;
 }
 
 .apply-info-card:hover {
@@ -451,7 +451,7 @@
 .info-icon {
   width: 60px;
   height: 60px;
-  background-color: rgba(93, 41, 6, 0.1);
+  background-color: rgba(21, 6, 93, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -461,13 +461,13 @@
 
 .info-icon i {
   font-size: 24px;
-  color: #5D2906;
+  color: var(--mp-light-bg);;
 }
 
 .apply-info-card h4 {
   font-size: 18px;
   font-weight: 700;
-  color: #5D2906;
+  color: var(--mp-light-bg);;
   margin-bottom: 10px;
 }
 

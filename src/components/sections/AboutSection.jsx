@@ -1,12 +1,14 @@
 import React from "react";
-import mplogo from "../../assets/images/mplogo.png";
+const mplogo = "assets/m_p_map.png";
 
 const AboutSection = () => {
   return (
     <section className="mp-section" id="about">
       <div className="container">
         <div className="section-header text-center">
-          <h2>From Local Hands to Global Lands</h2>
+          <h2>
+            A Cross-Border Platform for Startup Collaboration & Innovation
+          </h2>
           <div className="mp-divider"></div>
         </div>
 
@@ -37,24 +39,22 @@ const AboutSection = () => {
               </div>
 
               <p className="about-description">
-                The ODOP Village Accelerator isn't just another program—it's
-                your launchpad to international success. We're the
-                first-of-its-kind initiative by the ODOP Cell, Madhya Pradesh
-                Industrial Development Corporation, Government of Madhya
-                Pradesh. We're dedicated to transforming MP's finest district
-                products from local treasures into global success stories.
+                MP Global is a dynamic platform designed to connect startups,
+                incubators, investors, and ecosystem enablers from Madhya
+                Pradesh (India) and Germany. We enable global partnerships,
+                technology collaborations, market access, and knowledge exchange
+                between two thriving startup ecosystems.
               </p>
 
               <div className="join-section">
                 <h4 className="section-subheading">
                   <span className="icon-circle">?</span>
-                  Why Join Our Program?
+                  Our Vision.
                 </h4>
                 <p>
-                  Imagine your traditional crafts and products flying off
-                  shelves in Tokyo, trending in New York, and captivating
-                  markets in London. We're making this happen right now for
-                  artisans and entrepreneurs of Madhya Pradesh just like you.
+                  To create a seamless innovation bridge where German precision
+                  meets Indian scalability, enabling startups from both regions
+                  to co-create global impact solutions.
                 </p>
               </div>
             </div>
@@ -68,46 +68,74 @@ const AboutSection = () => {
                 <span className="icon-circle">
                   <i className="fas fa-star"></i>
                 </span>
-                What Sets Us Apart
+                Why MP Global?
               </h4>
 
               <div className="feature-items">
                 <div className="feature-item">
                   <div className="feature-icon">🚀</div>
                   <div className="feature-content">
-                    <h5>Zero to Global:</h5>
-                    <p>
-                      We don't just guide you—we propel you from local workshops
-                      to international marketplaces in record time.
-                    </p>
+                    <h5>Cross-Border Partnerships :</h5>
+                    <ul>
+                      <li>
+                        Facilitate collaboration between German and MP-based
+                        startups.
+                      </li>
+                      <li>
+                        Enable co-development of products, technology exchange,
+                        and joint ventures.
+                      </li>
+                      <li>
+                        Open up market access opportunities in both India and
+                        Europe.
+                      </li>
+                    </ul>
                   </div>
                 </div>
 
                 <div className="feature-item">
                   <div className="feature-icon">💡</div>
                   <div className="feature-content">
-                    <h5>Innovation Meets Tradition:</h5>
-                    <p>
-                      Keep your authentic roots while we help you revolutionize
-                      how the world discovers, experiences, and falls in love
-                      with your products.
-                    </p>
+                    <h5>Empowering Innovation Ecosystems:</h5>
+                    <ul>
+                      <li>
+                        Connect with India’s fastest-growing startup hubs in
+                        Madhya Pradesh.
+                      </li>
+                      <li>
+                        Engage with incubators, accelerators, research bodies,
+                        and industry leaders.
+                      </li>
+                      <li>
+                        Explore emerging sectors like AI, Agritech, Clean
+                        Energy, Social Impact, and Digital Manufacturing.
+                      </li>
+                    </ul>
                   </div>
                 </div>
 
                 <div className="feature-item">
                   <div className="feature-icon">💰</div>
                   <div className="feature-content">
-                    <h5>Access to Big Opportunities:</h5>
-                    <p>
-                      Connect directly with serious investors, major retailers,
-                      and e-commerce giants hungry for authentic, unique
-                      products with stories that sell.
-                    </p>
+                    <h5>Building Global Networks:</h5>
+                    <ul>
+                      <li>
+                        Network with startups, investors, corporate innovation
+                        teams, and policymakers.
+                      </li>
+                      <li>
+                        Join a global community of entrepreneurs, innovators,
+                        and mentors.
+                      </li>
+                      <li>
+                        Participate in virtual events, business matchmaking, and
+                        collaborative projects.
+                      </li>
+                    </ul>
                   </div>
                 </div>
 
-                <div className="feature-item">
+                {/* <div className="feature-item">
                   <div className="feature-icon">🔄</div>
                   <div className="feature-content">
                     <h5>Complete Transformation:</h5>
@@ -116,7 +144,7 @@ const AboutSection = () => {
                       to conquer global markets.
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

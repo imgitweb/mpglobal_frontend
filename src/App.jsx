@@ -13,11 +13,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* Add more routes as needed */}
         </Routes>
-        <div className="w-screen h-screen flex justify-center items-center bg-gray-100">
+        {/* <div className="w-screen h-screen flex justify-center items-center bg-gray-100">
           <Chatbot />
-        </div>
+        </div> */}
         <Footer />
       </div>
     </Router>

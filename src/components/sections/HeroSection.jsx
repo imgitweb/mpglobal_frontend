@@ -7,7 +7,11 @@ import bgImage3 from "../../assets/images/slider/slider3.png";
 
 const HeroSection = ({ useVideo = false }) => {
   // Array of background images for the slider
-  const backgroundImages = [bgImage1, bgImage2, bgImage3];
+  const backgroundImages = [
+    "assets/background_image.png",
+    "assets/background_image.png",
+    "assets/background_image.png",
+  ];
 
   // Array of slide content
   const slideContent = [
@@ -100,8 +104,8 @@ const HeroSection = ({ useVideo = false }) => {
             <div className="hero-content-wrapper">
               <div className="hero-eyebrow">Madhya Pradesh Initiative</div>
               <h1 className="hero-title">
-                ODOP <span className="highlight">VILLAGE</span>{" "}
-                <span className="accent">Accelerator</span>
+                MP <span className="highlight">GLOBAL</span>{" "}
+                {/* <span className="accent">Accelerator</span> */}
               </h1>
               <div className={`hero-subtitle ${isTransitioning ? "fade" : ""}`}>
                 {slideContent[currentImageIndex].title}
@@ -121,7 +125,7 @@ const HeroSection = ({ useVideo = false }) => {
               </div>
             </div>
           </div>
-          <div className="col-lg-5 d-none d-lg-block">
+          {/* <div className="col-lg-5 d-none d-lg-block">
             <div className="hero-badge">
               <div className="badge-content">
                 <div className="badge-icon">
@@ -133,7 +137,7 @@ const HeroSection = ({ useVideo = false }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="mp-art-pattern-bottom"></div>

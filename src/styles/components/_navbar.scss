@@ -4,12 +4,12 @@
   padding: 18px 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
-  
-  &.navbar-scrolled {
-    padding: 12px 0;
-    background-color: rgba(77, 51, 25, 0.98);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  }
+}
+
+.mp-navbar.navbar-scrolled {
+  padding: 12px 0;
+  background-color: rgba(25, 27, 77, 0.98); /* slightly lighter than --mp-light-brown */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand {
@@ -26,7 +26,7 @@
 }
 
 .highlight {
-  color: #ffa353;
+  color: var(--mp-accent);
   position: relative;
   transition: color 0.3s ease;
 }
@@ -59,7 +59,7 @@
   transform: translateX(-50%);
   width: 30px;
   height: 3px;
-  background-color: #c25e00;
+  background-color: var(--mp-accent);
   border-radius: 3px;
   transition: width 0.3s ease;
 }
@@ -68,22 +68,23 @@
   width: 40px;
 }
 
+/* Button style */
 a.nav-link.mp-btn-outline {
-  background: #c25e00;
-  color: white !important;
+  background: var(--mp-accent);
+  color: var(--mp-white) !important;
   padding: 8px 20px !important;
   border-radius: 50px;
   font-weight: 600;
-  border: 2px solid #c25e00;
+  border: 2px solid var(--mp-accent);
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(194, 94, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 91, 194, 0.3); /* blueish glow */
 }
 
 a.nav-link.mp-btn-outline:hover {
-  background: #e36d00;
-  border-color: #e36d00;
+  background: #1a28c5; /* darker blue hover */
+  border-color: #1a28c5;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(194, 94, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(13, 0, 194, 0.4);
 }
 
 .navbar-dark .navbar-nav .mp-btn-outline {
@@ -110,22 +111,22 @@ a.nav-link.mp-btn-outline:hover {
 @media (max-width: 991px) {
   .mp-navbar .navbar-nav {
     padding: 20px 0;
-    background-color: rgba(77, 51, 25, 0.98);
+    background-color: rgba(25, 27, 77, 0.98); /* mobile dropdown background */
     border-radius: 8px;
     margin-top: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   }
-  
+
   .mp-navbar .nav-link {
     padding: 12px 15px;
     margin: 5px 0;
     text-align: center;
   }
-  
+
   .navbar-dark .navbar-nav .nav-link.active::after {
     width: 50px;
   }
-  
+
   .navbar-dark .navbar-nav .mp-btn-outline {
     margin: 10px auto;
     padding: 10px 25px !important;

@@ -49,8 +49,8 @@ const BenefitsSection = () => {
       <div className="container">
         <div className="section-header text-center">
           <h2>
-            Why Join <span className="highlight">ODOP Village Accelerator</span>
-            ?
+            What <span className="highlight">MP Global </span>
+            Offers?
           </h2>
           <div className="mp-divider"></div>
           <p className="section-subtitle">
