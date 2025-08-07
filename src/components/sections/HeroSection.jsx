@@ -102,7 +102,7 @@ const HeroSection = ({ useVideo = false }) => {
               </div>
             </div>
 
-            <div className="col-lg-5 col-xl-6 d-none d-lg-flex justify-content-center align-items-center">
+            {/* <div className="col-lg-5 col-xl-6 d-none d-lg-flex justify-content-center align-items-center">
               <div
                 className="bg-white rounded-4 p-4 shadow-lg border w-100"
                 style={{
@@ -153,10 +153,10 @@ const HeroSection = ({ useVideo = false }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Right Column (Mobile View) */}
-            <div className="col-12 mt-5 d-lg-none d-flex justify-content-center">
+            {/* <div className="col-12 mt-5 d-lg-none d-flex justify-content-center">
               <div
                 className="bg-white rounded-4 p-4 shadow-lg border w-100"
                 style={{
@@ -204,7 +204,7 @@ const HeroSection = ({ useVideo = false }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

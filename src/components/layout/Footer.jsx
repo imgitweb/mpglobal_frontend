@@ -120,6 +120,7 @@ const Footer = () => {
               >
                 <input
                   type="email"
+                  className="form-control"
                   placeholder="Your email address"
                   required
                   value={email}
@@ -151,17 +152,16 @@ const Footer = () => {
                   color: "#777",
                 }}
               >
-                © 2025 ODOP Village Accelerator. All rights reserved. ODOP
-                Village Accelerator and its logo are trademarks under the M.P.
-                Industrial Development Corporation (MPIDC). All rights are
-                reserved. The content, tools, and application framework on this
-                website are provided and managed by Incubation Masters. While
-                MPIDC owns and oversees the platform, all operational content
-                and services are the sole responsibility of Incubation Masters.
-                Any queries, issues, or clarifications related to the site's
-                content or services should be directed to them. This platform is
-                developed by MPIDC and powered by Incubation Masters. Best
-                viewed on modern browsers.
+                © 2025 MP Global. All rights reserved. MP Global and its logo
+                are trademarks under the M.P. Industrial Development Corporation
+                (MPIDC). All rights are reserved. The content, tools, and
+                application framework on this website are provided and managed
+                by Incubation Masters. While MPIDC owns and oversees the
+                platform, all operational content and services are the sole
+                responsibility of Incubation Masters. Any queries, issues, or
+                clarifications related to the site's content or services should
+                be directed to them. This platform is developed by MPIDC and
+                powered by Incubation Masters. Best viewed on modern browsers.
               </p>
             </div>
           </div>

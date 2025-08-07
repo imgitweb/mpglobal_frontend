@@ -14,7 +14,7 @@ const features = [
     icon: "fas fa-map-marked-alt",
   },
   {
-    text: "Visa Types & Processes ",
+    text: "Visa Types & Processes",
     icon: "fas fa-lightbulb",
   },
   {
@@ -45,13 +45,16 @@ const features = [
 
 const MarketGuideCircle = () => {
   return (
-    <section className="py-5 bg-light text-center position-relative" id="market-guide">
+    <section
+      className="py-5 bg-light text-center position-relative"
+      id="market-guide"
+    >
       <div className="mp-art-pattern-top mb-5"></div>
       <div className="text-center mb-5">
-        <h2 className="fw-bold">
+        <h2 className="fw-bold fs-1">
           Go-to-
           <span
-            className="badge text-white fw-bold"
+            className="badge text-white fs-1 fw-bold"
             style={{
               backgroundColor: "#1a1c3c",
               borderRadius: "10px",
@@ -67,10 +70,16 @@ const MarketGuideCircle = () => {
           <span className="fw-bold" style={{ color: "#d67933" }}>
             INDIA
           </span>{" "}
-          & <span className="fw-bold text-dark">Germany</span>
+          & <span className="fw-bold text-dark">GERMANY</span>
         </h4>
       </div>
-      <div className="container position-relative" style={{ height: "600px" }}>
+
+      {/* Circular Layout (Only on md and above) */}
+      <div
+        className="container position-relative d-none d-md-block"
+        style={{ height: "600px" }}
+      >
+        {/* Center Image */}
         <div
           className="position-absolute top-50 start-50 translate-middle"
           style={{ width: "300px", height: "300px", zIndex: 2 }}
@@ -83,7 +92,7 @@ const MarketGuideCircle = () => {
           />
         </div>
 
-        {/* Items Around Circle */}
+        {/* Features Around the Circle */}
         <div className="position-absolute top-50 start-50 translate-middle w-100 h-100">
           {features.map((item, index) => {
             const angle = (index / features.length) * 360;
@@ -115,6 +124,29 @@ const MarketGuideCircle = () => {
               </div>
             );
           })}
+        </div>
+      </div>
+
+      {/* Mobile View (Stacked Layout) */}
+      <div className="container d-block d-md-none">
+        <div className="row g-3">
+          {features.map((item, index) => (
+            <div key={index} className="col-12">
+              <div className="p-3 bg-white border rounded shadow-sm d-flex align-items-center gap-3">
+                <i
+                  className={`${item.icon}`}
+                  style={{
+                    fontSize: "1.5rem",
+                    color: "#ff9800",
+                    minWidth: "24px",
+                  }}
+                ></i>
+                <span className="text-start" style={{ fontSize: "0.95rem" }}>
+                  {item.text}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

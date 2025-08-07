@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const IndustrialSnapshot = () => {
-  const [activeView, setActiveView] = useState("india"); // default for small screens
+  const [activeView, setActiveView] = useState("india");
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkScreenSize = () => {
+    const handleResize = () => {
       setIsMobile(window.innerWidth < 992);
     };
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-    return () => window.removeEventListener("resize", checkScreenSize);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const facts = [
@@ -82,284 +82,162 @@ const IndustrialSnapshot = () => {
   ];
 
   return (
-    <section id="quickFacts">
-      <div className="mp-art-pattern-top"></div>
-      <div className="text-center mt-3 mb-3">
-        <h1 className="display-4 fw-bold mb-3" style={{ color: "#FF9800" }}>
-          Quick Facts
-        </h1>
-        <h2 className="h3 text-dark mb-4">Madhya Pradesh & Germany</h2>
+    <section className="min-vh-100 position-relative" id="quickFacts">
+      <div className="mp-art-pattern-top mb-5"></div>
+      <div className="text-center">
+        <h2 className="fw-bold text-warning">Quick Facts</h2>
+        <h4 className="text-dark">Madhya Pradesh & Germany</h4>
       </div>
-      <div className="position-relative min-vh-100">
-        <div className="position-absolute w-100 h-100 overflow-hidden">
+
+      {/* Background */}
+      <div className="position-absolute w-100 h-100 overflow-hidden">
+        <div
+          className="position-absolute h-100"
+          style={{
+            left: 0,
+            width: "50%",
+            zIndex: 0,
+            backgroundImage:
+              "linear-gradient(rgba(255, 255, 255, 0.9), rgba(240, 190, 120, 0.9))",
+          }}
+        />
+        <div
+          className="position-absolute h-100"
+          style={{
+            right: 0,
+            width: "50%",
+            zIndex: 0,
+            backgroundImage:
+              'linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        {/* Mobile background */}
+        {isMobile && (
           <div
-            className="position-absolute h-100"
+            className="position-absolute top-0 start-0 w-100 h-100"
             style={{
-              left: 0,
-              width: "50%",
               backgroundImage:
-                'linear-gradient(rgba(255,152,0,0.85), rgba(255,152,0,0.85)), url("/assets/madhyaPradesh.png")',
+                activeView === "india"
+                  ? "linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))"
+                  : 'linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
               backgroundSize: "cover",
               backgroundPosition: "center",
+              zIndex: 0,
             }}
           />
+        )}
+      </div>
 
-          {/* Germany side background */}
-          <div
-            className="position-absolute h-100"
-            style={{
-              right: 0,
-              width: "50%",
-              backgroundImage:
-                'linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-
-          {/* Mobile background overlay */}
+      <div className="container position-relative py-5" style={{ zIndex: 2 }}>
+        <div className="text-center mb-4">
+          {/* Toggle Buttons (Mobile Only) */}
           {isMobile && (
-            <div
-              className="position-absolute w-100 h-100"
-              style={{
-                backgroundImage:
-                  activeView === "india"
-                    ? 'linear-gradient(rgba(255,152,0,0.85), rgba(255,152,0,0.85)), url("/assets/madhyaPradesh.png")'
-                    : 'linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                zIndex: 1,
-              }}
-            />
-          )}
-        </div>
-
-        <div className="container py-5 position-relative" style={{ zIndex: 2 }}>
-          {/* Header */}
-          <div className="text-center mb-5">
-            {/* Toggle Buttons (visible only on mobile) */}
-            {isMobile && (
-              <div className="d-flex justify-content-center gap-3 mt-3">
-                <button
-                  className={`btn ${
-                    activeView === "india" ? "btn-warning" : "btn-outline-light"
-                  }`}
-                  onClick={() => setActiveView("india")}
-                >
-                  Madhya Pradesh
-                </button>
-                <button
-                  className={`btn ${
-                    activeView === "germany"
-                      ? "btn-light text-dark"
-                      : "btn-outline-light"
-                  }`}
-                  onClick={() => setActiveView("germany")}
-                >
-                  Germany
-                </button>
-              </div>
-            )}
-          </div>
-
-          {/* Content */}
-          <div className="row position-relative">
-            {/* India Column */}
-            {(!isMobile || activeView === "india") && (
-              <div className="col-lg-5 d-flex flex-column justify-content-center">
-                {/* Country Header */}
-                <div className="text-center text-lg-end mb-4">
-                  <div className="mb-3">
-                    {/* <span
-                      className="badge rounded-pill px-3 py-2 fs-6 fw-bold"
-                      style={{ backgroundColor: "#FF9800", color: "white" }}
-                    >
-                      IN
-                    </span> */}
-                  </div>
-                  <h3 className="text-white fw-bold mb-0 text-center">
-                    MADHYA PRADESH
-                  </h3>
-                </div>
-
-                {/* Facts */}
-                <div className="text-lg-end">
-                  {facts.map((fact, index) => (
-                    <div key={index} className="mb-4">
-                      <p className="mb-0 fs-5 text-white fw-normal text-end pe-4">
-                        {fact.mp}
-                      </p>
-                      {index < facts.length - 1 && (
-                        <hr
-                          className="text-white opacity-25 ms-auto"
-                          style={{ width: "80%" }}
-                        />
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Center Timeline */}
-            {!isMobile && (
-              <div className="col-lg-2 d-flex justify-content-center">
-                <div className="position-relative d-flex flex-column justify-content-center align-items-center h-100">
-                  {/* Main Timeline Line */}
-                  <div
-                    className="position-absolute"
-                    style={{
-                      width: "4px",
-                      height: "80%",
-                      backgroundColor: "#ffffff",
-                      top: "10%",
-                    }}
-                  />
-
-                  {/* Timeline Icons */}
-                  <div className="d-flex flex-column justify-content-around h-100 py-5">
-                    {facts.map((fact, index) => (
-                      <div
-                        key={index}
-                        className="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold position-relative"
-                        style={{
-                          backgroundColor: fact.color,
-                          width: "60px",
-                          height: "60px",
-                          fontSize: "1.5rem",
-                          border: "4px solid white",
-                          zIndex: 3,
-                        }}
-                      >
-                        {fact.icon}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Germany Column */}
-            {(!isMobile || activeView === "germany") && (
-              <div className="col-lg-5 d-flex flex-column justify-content-center">
-                {/* Country Header */}
-                <div className="text-center text-lg-start mb-4">
-                  <div className="mb-3">
-                    {/* <span
-                      className="badge rounded-pill px-3 py-2 fs-6 fw-bold"
-                      style={{ backgroundColor: "#000", color: "white" }}
-                    >
-                      DE
-                    </span> */}
-                  </div>
-                  <h3
-                    className="text-white fw-bold mb-0 text-center"
-                    // style={{
-                    //   fontSize: "2rem",
-                    //   transform: "rotate(90deg)",
-                    //   transformOrigin: "center",
-                    //   writingMode: "vertical-lr",
-                    //   textOrientation: "mixed",
-                    // }}
-                  >
-                    GERMANY
-                  </h3>
-                </div>
-
-                {/* Facts */}
-                <div className="text-lg-start">
-                  {facts.map((fact, index) => (
-                    <div key={index} className="mb-4">
-                      <p className="mb-0 fs-5 text-white fw-normal text-start ps-4">
-                        {fact.germany}
-                      </p>
-                      {index < facts.length - 1 && (
-                        <hr
-                          className="text-white opacity-25 me-auto"
-                          style={{ width: "80%" }}
-                        />
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Bottom Statistics Section */}
-          {!isMobile && (
-            <div className="row mt-5">
-              <div className="col-12">
-                <div className="bg-white bg-opacity-10 backdrop-blur rounded p-4">
-                  <div className="row text-center">
-                    <div className="col-md-3 mb-3">
-                      <div className="text-white">
-                        <h4 className="fw-bold text-warning">70+</h4>
-                        <p className="mb-0">Industrial Areas (MP)</p>
-                      </div>
-                    </div>
-                    <div className="col-md-3 mb-3">
-                      <div className="text-white">
-                        <h4 className="fw-bold text-info">3,000+</h4>
-                        <p className="mb-0">Industrial Clusters (Germany)</p>
-                      </div>
-                    </div>
-                    <div className="col-md-3 mb-3">
-                      <div className="text-white">
-                        <h4 className="fw-bold text-success">Asia's Only</h4>
-                        <p className="mb-0">Diamond Mine (MP)</p>
-                      </div>
-                    </div>
-                    <div className="col-md-3 mb-3">
-                      <div className="text-white">
-                        <h4 className="fw-bold text-danger">Global Leader</h4>
-                        <p className="mb-0">Automotive (Germany)</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="mt-3 d-flex justify-content-center gap-3">
+              <button
+                className={`btn ${
+                  activeView === "india" ? "btn-warning" : "btn-outline-light"
+                }`}
+                onClick={() => setActiveView("india")}
+              >
+                Madhya Pradesh
+              </button>
+              <button
+                className={`btn ${
+                  activeView === "germany"
+                    ? "btn-light text-light"
+                    : "btn-outline-dark"
+                }`}
+                onClick={() => setActiveView("germany")}
+              >
+                Germany
+              </button>
             </div>
           )}
         </div>
 
-        {/* Custom CSS */}
-        <style jsx>{`
-          .backdrop-blur {
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-          }
+        {/* Facts */}
+        <div className="row">
+          {facts.map((fact, index) => (
+            <div
+              key={index}
+              className="row align-items-center mb-4 text-center text-lg-start"
+            >
+              {/* MP Fact */}
+              {(!isMobile || activeView === "india") && (
+                <div className="col-lg-5">
+                  <p className="mb-0 fs-5 text-dark">{fact.mp}</p>
+                  <hr />
+                </div>
+              )}
 
-          @media (max-width: 991px) {
-            .col-lg-2 {
-              display: none !important;
-            }
+              {/* Icon */}
+              {!isMobile && (
+                <div className="col-lg-2 d-flex justify-content-center">
+                  <div
+                    className="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold"
+                    style={{
+                      backgroundColor: fact.color,
+                      width: "60px",
+                      height: "60px",
+                      fontSize: "1.5rem",
+                      border: "4px solid white",
+                    }}
+                  >
+                    {fact.icon}
+                  </div>
+                </div>
+              )}
 
-            h3[style*="rotate"] {
-              transform: none !important;
-              writing-mode: horizontal-tb !important;
-              text-orientation: mixed !important;
-              text-align: center !important;
-            }
-          }
+              {/* Germany Fact */}
+              {(!isMobile || activeView === "germany") && (
+                <div className="col-lg-5">
+                  <p className="mb-0 fs-5 text-white">{fact.germany}</p>
+                  <hr />
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
 
+        {/* Bottom Stats (Desktop Only) */}
+        {!isMobile && (
+          <div className="row mt-5">
+            <div className="col-12">
+              <div className="bg-white bg-opacity-10 backdrop-blur rounded p-4">
+                <div className="row text-center">
+                  <div className="col-md-3 mb-3 text-white">
+                    <h4 className="fw-bold text-warning">70+</h4>
+                    <p>Industrial Areas (MP)</p>
+                  </div>
+                  <div className="col-md-3 mb-3 text-white">
+                    <h4 className="fw-bold text-info">3,000+</h4>
+                    <p>Industrial Clusters (Germany)</p>
+                  </div>
+                  <div className="col-md-3 mb-3 text-white">
+                    <h4 className="fw-bold text-success">Asia's Only</h4>
+                    <p>Diamond Mine (MP)</p>
+                  </div>
+                  <div className="col-md-3 mb-3 text-white">
+                    <h4 className="fw-bold text-danger">Global Leader</h4>
+                    <p>Automotive (Germany)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* CSS */}
+        <style>{`
           .min-vh-100 {
             min-height: 100vh;
           }
-
-          /* Smooth transitions */
-          .position-absolute {
-            transition: all 0.3s ease;
-          }
-
-          /* Text alignment adjustments */
-          @media (min-width: 992px) {
-            .text-lg-end {
-              text-align: end !important;
-            }
-            .text-lg-start {
-              text-align: start !important;
-            }
+          .backdrop-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
           }
         `}</style>
       </div>

@@ -72,6 +72,7 @@ const ContactSection = () => {
 
   return (
     <section className="mp-section" id="contact">
+      <div className="mp-art-pattern-top mb-4 mt-n4"></div>
       <div className="container">
         <div className="section-header text-center">
           <h2>
