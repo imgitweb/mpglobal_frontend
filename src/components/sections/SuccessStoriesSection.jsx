@@ -40,7 +40,7 @@ const SuccessStoriesSection = () => {
 
   return (
     <section className="mp-section mp-section-alt" id="success-stories">
-      <div className="mp-art-pattern-top"></div>
+      {/* <div className="mp-art-pattern-top"></div> */}
       <div className="container">
         <div className="section-header text-center">
           <h2>

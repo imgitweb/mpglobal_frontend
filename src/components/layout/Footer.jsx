@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-4">
             <div className="footer-about">
-              <h3 className="footer-logo">ODOP Village Accelerator</h3>
+              <h3 className="footer-logo">MP Global Accelerator</h3>
               <p>
                 A flagship initiative by the Department of Industrial Policy and
                 Investment Promotion (DIPIP), Government of Madhya Pradesh.
@@ -78,16 +78,10 @@ const Footer = () => {
                   <a href="#home">Home</a>
                 </li>
                 <li>
-                  <a href="#about">About</a>
+                  <a href="#overview">overview</a>
                 </li>
                 <li>
                   <a href="#benefits">Benefits</a>
-                </li>
-                <li>
-                  <a href="#program">Program</a>
-                </li>
-                <li>
-                  <a href="#eligibility">Eligibility</a>
                 </li>
                 <li>
                   <a href="#faq">FAQ</a>

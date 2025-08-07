@@ -8,7 +8,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Sticky navbar logic
-      if (window.scrollY > 50) {
+      if (window.scrollY > 70) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -16,6 +16,7 @@ const Navbar = () => {
 
       // Update active section based on scroll position
       const sections = document.querySelectorAll("section[id]");
+      console.log(sections);
       const navHeight = document.querySelector(".navbar")?.offsetHeight || 0;
 
       sections.forEach((section) => {
@@ -57,7 +58,7 @@ const Navbar = () => {
     >
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <h4>MP Global</h4>
+          <h4 className="text-white">MP Global</h4>
         </Link>
         <button
           className="navbar-toggler"
@@ -70,7 +71,10 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div
+          className="collapse navbar-collapse d-flex justify-content-end"
+          id="navbarNav"
+        >
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <a
@@ -97,7 +101,35 @@ const Navbar = () => {
                   scrollToSection("about");
                 }}
               >
-                About
+                Overview
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className={`nav-link ${
+                  activeSection === "quickFacts" ? "active" : ""
+                }`}
+                // href="#facts"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("quickFacts");
+                }}
+              >
+                Quick Facts
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className={`nav-link ${
+                  activeSection === "market-guide" ? "active" : ""
+                }`}
+                // href="#facts"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("market-guide");
+                }}
+              >
+                Market Guide
               </a>
             </li>
             <li className="nav-item">
@@ -117,18 +149,32 @@ const Navbar = () => {
             <li className="nav-item">
               <a
                 className={`nav-link ${
-                  activeSection === "program" ? "active" : ""
+                  activeSection === "service" ? "active" : ""
                 }`}
                 href="#program"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection("program");
+                  scrollToSection("service");
                 }}
               >
-                Program
+                Services
               </a>
             </li>
             <li className="nav-item">
+              <a
+                className={`nav-link ${
+                  activeSection === "faq" ? "active" : ""
+                }`}
+                href="#program"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("faq");
+                }}
+              >
+                FAQ's
+              </a>
+            </li>
+            {/* <li className="nav-item">
               <a
                 className={`nav-link ${
                   activeSection === "success-stories" ? "active" : ""
@@ -141,8 +187,8 @@ const Navbar = () => {
               >
                 Success Stories
               </a>
-            </li>
-            <li className="nav-item">
+            </li> */}
+            {/* <li className="nav-item">
               <a
                 className={`nav-link mp-btn-outline ${
                   activeSection === "apply" ? "active" : ""
@@ -155,7 +201,7 @@ const Navbar = () => {
               >
                 Apply Now
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
