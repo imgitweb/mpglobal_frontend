@@ -6,9 +6,7 @@ const AboutSection = () => {
     <section className="mp-section" id="about">
       <div className="container">
         <div className="section-header text-center">
-          <h2>
-            A Cross-Border Platform for Startup Collaboration & Innovation
-          </h2>
+          <h2>Overview</h2>
           <div className="mp-divider"></div>
         </div>
 
@@ -21,6 +19,7 @@ const AboutSection = () => {
                     src={mplogo}
                     alt="MP Craft Heritage"
                     className="img-fluid"
+                    style={{ backgroundColor: "#f8981a" }}
                   />
                 </div>
                 <div className="frame-decoration frame-decoration-1"></div>
@@ -29,23 +28,37 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-6 mt-n3">
             <div className="about-content">
-              <div className="intro-text">
-                <p>
-                  Ready to showcase your unique Madhya Pradesh product to the
-                  world? Your global journey begins here.
-                </p>
+              <div className="intro-text text-white text-center">
+                <h5>Welcome to Global MP</h5>
+                <h6>
+                  Empowering Startups. Connecting Borders. Creating Impact.
+                </h6>
               </div>
 
               <p className="about-description">
-                MP Global is a dynamic platform designed to connect startups,
-                incubators, investors, and ecosystem enablers from Madhya
-                Pradesh (India) and Germany. We enable global partnerships,
-                technology collaborations, market access, and knowledge exchange
-                between two thriving startup ecosystems.
+                Launching in <strong> August 2025 </strong>, Global MP is a
+                visionary initiative led by the
+                <strong>
+                  {" "}
+                  Hon’ble Chief Minister of Madhya Pradesh, Dr. Mohan Yadav{" "}
+                </strong>
+                , designed to accelerate entrepreneurship and support
+                high-potential startups in accessing both domestic and
+                international markets. At its core, Global MP is about breaking
+                barriers—facilitating market entry, enabling innovation-driven
+                partnerships, and building a thriving cross-border startup
+                ecosystem. Through strategic alliances with global institutions,
+                the initiative promotes knowledge exchange, attracts
+                international investment, and drives collaborative innovation.
+                Whether you are a founder, investor, incubator, or policymaker —{" "}
+                <strong>
+                  Global MP is your gateway to global growth and meaningful
+                  impact.
+                </strong>
               </p>
-
+              {/* 
               <div className="join-section">
                 <h4 className="section-subheading">
                   <span className="icon-circle">?</span>
@@ -56,12 +69,12 @@ const AboutSection = () => {
                   meets Indian scalability, enabling startups from both regions
                   to co-create global impact solutions.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
 
-        <div className="row mt-5">
+        {/* <div className="row mt-5">
           <div className="col-12">
             <div className="features-section">
               <h4 className="section-subheading">
@@ -135,16 +148,6 @@ const AboutSection = () => {
                   </div>
                 </div>
 
-                {/* <div className="feature-item">
-                  <div className="feature-icon">🔄</div>
-                  <div className="feature-content">
-                    <h5>Complete Transformation:</h5>
-                    <p>
-                      Walk in with a product; walk out with a brand that's ready
-                      to conquer global markets.
-                    </p>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
@@ -174,7 +177,7 @@ const AboutSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

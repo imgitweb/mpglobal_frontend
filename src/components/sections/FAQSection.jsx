@@ -1,157 +1,133 @@
 import React, { useState } from "react";
 
+// Categories
+const faqCategories = [
+  {
+    id: "about",
+    title: "About MP Global",
+    icon: "fas fa-globe",
+    color: "#f8981a",
+  },
+  {
+    id: "eligibility",
+    title: "Eligibility",
+    icon: "fas fa-check-circle",
+    color: "#28a745",
+  },
+  {
+    id: "benefits",
+    title: "Benefits",
+    icon: "fas fa-star",
+    color: "#17a2b8",
+  },
+  {
+    id: "process",
+    title: "Process & Application",
+    icon: "fas fa-tasks",
+    color: "#ffc107",
+  },
+  {
+    id: "support",
+    title: "Support",
+    icon: "fas fa-hands-helping",
+    color: "#6f42c1",
+  },
+];
+
+// Grouped FAQs by category
+const faqItems = {
+  about: [
+    {
+      id: 1,
+      question: "What is MP Global?",
+      answer:
+        "MP Global is a cross-border bridge program launched by the Government of Madhya Pradesh through MPIDC, designed to connect Madhya Pradesh-based startups with international ecosystems.",
+    },
+    {
+      id: 2,
+      question: "Which countries are included?",
+      answer:
+        "The first partner country is Germany. Other countries will be announced soon.",
+    },
+  ],
+  eligibility: [
+    {
+      id: 3,
+      question: "Who can participate in MP Global?",
+      answer: `Eligible participants include:
+      • Startups based in Madhya Pradesh
+      • Startups from Germany or partner countries
+      • Investors, incubators, corporates
+      • Academic & research institutions`,
+    },
+  ],
+  benefits: [
+    {
+      id: 4,
+      question: "What are the benefits for startups?",
+      answer: `Startups can access:
+      • Cross-border mentorship
+      • B2B matchmaking & investor connections
+      • Soft landing support
+      • Global innovation exposure`,
+    },
+    {
+      id: 9,
+      question: "How will German startups benefit?",
+      answer: `German startups get:
+      • Access to Indian markets
+      • Local mentorship and incubation
+      • Innovation exchange
+      • Government support`,
+    },
+  ],
+  process: [
+    {
+      id: 6,
+      question: "How can a startup apply?",
+      answer:
+        "Apply via the official MP Global website or through recognized incubators. Watch for announcements under country-specific programs.",
+    },
+    {
+      id: 5,
+      question: "Is there a fee to participate?",
+      answer:
+        "No. The program is supported by the Government of MP. It may be free or subsidized depending on the program.",
+    },
+  ],
+  support: [
+    {
+      id: 7,
+      question:
+        "What kind of support is provided for entering international markets?",
+      answer: `Support includes:
+      • Startup visa info
+      • Market briefings & guidance
+      • Local mentors & incubators
+      • Business showcases`,
+    },
+    {
+      id: 8,
+      question: "What sectors does MP Global focus on?",
+      answer: `Focus sectors:
+      • Technology & AI
+      • AgriTech & CleanTech
+      • MedTech & Industrial Tech`,
+    },
+    {
+      id: 10,
+      question: "Who can I contact for more information?",
+      answer: `Contact:
+      • exportcell@mpidc.co.in
+      • 0755-2577145
+      • Socials: LinkedIn, Instagram, YouTube, Facebook`,
+    },
+  ],
+};
+
 const FAQSection = () => {
   const [activeCategory, setActiveCategory] = useState("about");
   const [activeKey, setActiveKey] = useState(null);
-
-  const faqCategories = [
-    {
-      id: "about",
-      title: "About the Program",
-      icon: "fas fa-info-circle",
-      color: "#FF8C00",
-    },
-    {
-      id: "eligibility",
-      title: "Eligibility & Application",
-      icon: "fas fa-clipboard-check",
-      color: "#1976D2",
-    },
-    {
-      id: "details",
-      title: "Program Details",
-      icon: "fas fa-calendar-alt",
-      color: "#43A047",
-    },
-    {
-      id: "benefits",
-      title: "Benefits & Outcomes",
-      icon: "fas fa-gift",
-      color: "#9C27B0",
-    },
-  ];
-
-  const faqItems = {
-    about: [
-      {
-        id: "about-1",
-        question: "What is the ODOP Village Accelerator?",
-        answer:
-          "The ODOP Village Accelerator is the first-of-its-kind initiative by the ODOP Cell, Madhya Pradesh Industrial Development Corporation, Government of Madhya Pradesh. It's designed to help local artisans, producers, and entrepreneurs take their district products to global markets.",
-      },
-      {
-        id: "about-2",
-        question: `What does "From Local Hands to Global Lands" mean?`,
-        answer:
-          "Our tagline represents our mission to transform locally-made products from Madhya Pradesh into globally recognized brands, connecting skilled local artisans and producers with international markets and consumers.",
-      },
-      {
-        id: "about-3",
-        question: "How long does the program run?",
-        answer:
-          "The program spans approximately 3 months, divided into three phases: a 1-month district discovery and selection phase, a 1-month intensive global readiness acceleration phase, and culminating with a 1-week ODOP Mega Conclave in Bhopal.",
-      },
-      {
-        id: "about-4",
-        question: "Is there a cost to participate in the program?",
-        answer:
-          "The program is fully supported by the Government of Madhya Pradesh. There is no fee to apply or participate for selected candidates.",
-      },
-    ],
-    eligibility: [
-      {
-        id: "eligibility-1",
-        question: "My business is very small/new. Can I still apply?",
-        answer:
-          "Yes! We welcome businesses of all sizes, including artisans without formal business structures. The most important criteria are product quality, alignment with your district's ODOP category, and your commitment to growth.",
-      },
-      {
-        id: "eligibility-2",
-        question: "Do I need to have export experience to apply?",
-        answer:
-          "No prior export experience is required. In fact, the program is specifically designed to help businesses with little or no export experience develop the skills and connections needed to enter global markets.",
-      },
-      {
-        id: "eligibility-3",
-        question:
-          "I don't have formal business registration. Can I still apply?",
-        answer:
-          "Yes. While formal registration is preferred, we understand that many artisans and traditional craftspeople operate informally. We can provide guidance on formalization as part of the program if you're selected.",
-      },
-      {
-        id: "eligibility-4",
-        question: "How many participants will be selected?",
-        answer:
-          "We will select 30-50 participants for the inaugural cohort, representing a diverse range of products across Madhya Pradesh's districts.",
-      },
-      {
-        id: "eligibility-5",
-        question: "How do I apply?",
-        answer:
-          "You can apply online through our website or attend one of our district bootcamps where our team will assist you with the application process. The application requires basic information about you and your product.",
-      },
-    ],
-    details: [
-      {
-        id: "details-1",
-        question: "What will I learn during the program?",
-        answer:
-          "Participants will learn about product development, packaging, quality standards, export documentation, digital marketing, e-commerce integration, access to finance, and more – all tailored to preparing their specific products for global markets.",
-      },
-      {
-        id: "details-2",
-        question: "Do I need to attend in person?",
-        answer:
-          "The program follows a hybrid model. Some components like the district bootcamps and final conclave in Bhopal require in-person attendance, while many training sessions will be available virtually to accommodate participants from across the state.",
-      },
-      {
-        id: "details-3",
-        question: "What is the ODOP Mega Conclave?",
-        answer:
-          "The ODOP Mega Conclave is a week-long culminating event in Bhopal where participants will showcase their products to domestic and international buyers, connect with investors, and participate in the ODOP Excellence Awards ceremony.",
-      },
-      {
-        id: "details-4",
-        question: "What kind of support will I receive after the program ends?",
-        answer:
-          "Graduates of the program will receive ongoing support through access to our alumni network, follow-up mentoring sessions, and connections to market opportunities through the ODOP Cell.",
-      },
-    ],
-    benefits: [
-      {
-        id: "benefits-1",
-        question:
-          "What makes this program different from other business development initiatives?",
-        answer:
-          "The ODOP Village Accelerator is uniquely focused on district-specific products with cultural significance, provides direct connections to international markets, and offers a comprehensive range of support from product development to export facilitation – all backed by the Government of Madhya Pradesh.",
-      },
-      {
-        id: "benefits-2",
-        question: "Will the program help me find buyers for my products?",
-        answer:
-          "Yes. A key component of the program is connecting participants with potential buyers, retailers, and e-commerce platforms, both nationally and internationally. The ODOP Mega Conclave will include B2B matchmaking sessions specifically designed for this purpose.",
-      },
-      {
-        id: "benefits-3",
-        question:
-          "Can the program help with product certification or compliance requirements?",
-        answer:
-          "Absolutely. We will provide guidance on relevant certifications for your product category (such as GI tags, organic certification, etc.) and help you understand and meet compliance requirements for target export markets.",
-      },
-      {
-        id: "benefits-4",
-        question: "Will I get funding for my business through this program?",
-        answer:
-          "While the program itself doesn't provide direct funding, we will connect participants with various financing options, including government schemes, bank loans, and potential investors. Outstanding participants may receive awards that include financial support during the ODOP Excellence Awards.",
-      },
-      {
-        id: "benefits-5",
-        question: "How will the program help me sell my products online?",
-        answer:
-          "The program includes specific training on e-commerce setup and management, including assistance with registering on platforms like Amazon Global Selling, eBay, and ONDC. Some participants may also receive support with website development through our partner programs.",
-      },
-    ],
-  };
 
   const toggleCategory = (categoryId) => {
     setActiveCategory(categoryId);
@@ -171,7 +147,6 @@ const FAQSection = () => {
         padding: "80px 0",
       }}
     >
-      <div className="mp-art-pattern-top"></div>
       <div className="container">
         <div className="section-header text-center">
           <h2>
@@ -179,12 +154,12 @@ const FAQSection = () => {
           </h2>
           <div className="mp-divider"></div>
           <p className="section-subtitle">
-            Find answers to common questions about the ODOP Village Accelerator
-            program
+            Find answers to common questions about the MP Global Program
           </p>
         </div>
 
         <div className="row mt-5">
+          {/* Sidebar */}
           <div className="col-lg-3">
             <div
               className="faq-categories"
@@ -252,6 +227,7 @@ const FAQSection = () => {
               ))}
             </div>
 
+            {/* Contact Box */}
             <div
               className="contact-box mt-4"
               style={{
@@ -262,39 +238,20 @@ const FAQSection = () => {
                 borderLeft: "4px solid #FF8C00",
               }}
             >
-              <h4
-                style={{
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  marginBottom: "15px",
-                }}
-              >
+              <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
                 Still have questions?
               </h4>
-              <p
-                style={{
-                  fontSize: "14px",
-                  color: "#666",
-                  marginBottom: "15px",
-                }}
-              >
-                Contact us to speak with an ODOP Village Accelerator team member
-                who will be happy to assist you.
+              <p style={{ fontSize: "14px", color: "#666" }}>
+                Contact our team for assistance.
               </p>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "10px",
-                }}
-              >
+              <div className="d-flex align-items-center mb-2">
                 <i
                   className="fas fa-envelope"
                   style={{ color: "#FF8C00", marginRight: "10px" }}
                 ></i>
                 <span>exportcell@mpidc.co.in</span>
               </div>
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div className="d-flex align-items-center">
                 <i
                   className="fas fa-phone-alt"
                   style={{ color: "#FF8C00", marginRight: "10px" }}
@@ -304,6 +261,7 @@ const FAQSection = () => {
             </div>
           </div>
 
+          {/* FAQ Content */}
           <div className="col-lg-9">
             <div
               className="faq-content"
@@ -352,13 +310,10 @@ const FAQSection = () => {
                         type="button"
                         onClick={() => toggleAccordion(item.id)}
                         aria-expanded={activeKey === item.id}
-                        aria-controls={item.id}
                         style={{
                           padding: "15px 20px",
                           backgroundColor:
                             activeKey === item.id ? "#f8f9fa" : "white",
-                          boxShadow: "none",
-                          borderRadius: "0",
                           fontWeight: "600",
                           color:
                             activeKey === item.id
@@ -366,30 +321,28 @@ const FAQSection = () => {
                                   (c) => c.id === activeCategory
                                 ).color
                               : "#333",
-                          position: "relative",
                           display: "flex",
                           alignItems: "center",
+                          position: "relative",
                         }}
                       >
                         <span
                           style={{
                             width: "30px",
                             height: "30px",
-                            display: "inline-flex",
-                            alignItems: "center",
-                            justifyContent: "center",
                             backgroundColor:
                               activeKey === item.id
                                 ? faqCategories.find(
                                     (c) => c.id === activeCategory
                                   ).color
                                 : "#eee",
-                            color: activeKey === item.id ? "white" : "#666",
+                            color: activeKey === item.id ? "#fff" : "#666",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                             borderRadius: "50%",
-                            marginRight: "15px",
-                            fontSize: "14px",
                             fontWeight: "bold",
-                            flexShrink: 0,
+                            marginRight: "15px",
                           }}
                         >
                           Q
@@ -404,23 +357,12 @@ const FAQSection = () => {
                           style={{
                             position: "absolute",
                             right: "20px",
-                            color:
-                              activeKey === item.id
-                                ? faqCategories.find(
-                                    (c) => c.id === activeCategory
-                                  ).color
-                                : "#999",
-                            transition: "transform 0.3s ease",
-                            transform:
-                              activeKey === item.id
-                                ? "rotate(180deg)"
-                                : "rotate(0)",
+                            color: "#999",
                           }}
                         ></i>
                       </button>
                     </h2>
                     <div
-                      id={item.id}
                       className={`accordion-collapse collapse ${
                         activeKey === item.id ? "show" : ""
                       }`}
@@ -450,7 +392,6 @@ const FAQSection = () => {
                               (c) => c.id === activeCategory
                             ).color,
                             borderRadius: "50%",
-                            fontSize: "14px",
                             fontWeight: "bold",
                           }}
                         >
@@ -466,7 +407,6 @@ const FAQSection = () => {
           </div>
         </div>
       </div>
-      <div className="mp-art-pattern-bottom"></div>
     </section>
   );
 };

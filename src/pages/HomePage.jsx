@@ -9,6 +9,9 @@ import ApplySection from "../components/sections/ApplySection";
 import PartnersSection from "../components/sections/PartnersSection";
 import FAQSection from "../components/sections/FAQSection";
 import ContactSection from "../components/sections/ContactSection";
+import IndustrialSnapshot from "../components/sections/FactQuestions";
+import MPGlobalServices from "../components/sections/Services";
+import MarketGuideCircle from "../components/sections/MarketGuide";
 
 const HomePage = () => {
   useEffect(() => {
@@ -74,10 +77,13 @@ const HomePage = () => {
     <main>
       <HeroSection />
       <AboutSection />
+      <IndustrialSnapshot />
+      <MarketGuideCircle />
       <BenefitsSection />
-      <ProgramSection />
-      <SuccessStoriesSection />
-      <ApplySection />
+      {/* <ProgramSection /> */}
+      <MPGlobalServices />
+      {/* <SuccessStoriesSection /> */}
+      {/* <ApplySection /> */}
       {/* <EligibilitySection /> */}
       <PartnersSection />
       <FAQSection />

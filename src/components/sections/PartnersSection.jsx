@@ -1,14 +1,14 @@
 import React from "react";
 
-import partner2 from "../../assets/images/partner/2.png";
-import partner3 from "../../assets/images/partner/3.png";
-import partner4 from "../../assets/images/partner/4.png";
+import partner2 from "/partner/infobeans_logo.png";
+// import partner3 from "../../assets/images/partner/3.png";
+// import partner4 from "../../assets/images/partner/4.png";
 
 const PartnersSection = () => {
   const partners = [
     { image: partner2, name: "Partner 2" },
-    { image: partner3, name: "Partner 3" },
-    { image: partner4, name: "Partner 4" },
+    // { image: partner3, name: "Partner 3" },
+    // { image: partner4, name: "Partner 4" },
   ];
 
   return (
@@ -16,7 +16,7 @@ const PartnersSection = () => {
       <div className="container">
         <div className="section-header text-center">
           <h2>
-            Our <span className="highlight">Partners</span>
+            Our <span className="highlight">Exclusive Partners</span>
           </h2>
           <div className="mp-divider"></div>
           {/* <p className="section-subtitle">Supporting MP Art Propel's mission</p> */}
