@@ -90,7 +90,7 @@ const ContactSection = () => {
                 <i className="fas fa-map-marker-alt"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>MPIDC Bhawan, Arera Hills, Bhopal</p>
+                  <p>E07, 8th Floor, Bansal One, Bhopal 462016 MP, IN</p>
                 </div>
               </div>
               <div className="contact-item">
@@ -105,7 +105,7 @@ const ContactSection = () => {
                 <i className="fas fa-envelope"></i>
                 <div>
                   <h3>Email</h3>
-                  <p>exportcell@mpidc.co.in</p>
+                  <p>info@incubationmasters.com</p>
                 </div>
               </div>
               <div className="social-links">

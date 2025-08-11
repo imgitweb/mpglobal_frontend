@@ -7,38 +7,6 @@ const MPGlobalServices = () => {
 
   const services = [
     {
-      id: 1,
-      icon: "💎",
-      title: "Cross-Border Startup Matchmaking",
-      description:
-        "Connect with complementary startups, partners, and innovators from India and Germany to explore synergies and co-create impactful solutions.",
-      color: "#FF9800",
-    },
-    {
-      id: 2,
-      icon: "🌍",
-      title: "International Collaboration Opportunities",
-      description:
-        "Participate in joint projects, pilots, and co-development initiatives between Indian and German enterprises, academia, and institutions.",
-      color: "#4CAF50",
-    },
-    {
-      id: 3,
-      icon: "✈️",
-      title: "Market Access & Soft-Landing Support",
-      description:
-        "Receive hands-on assistance for entering new markets, including regulatory guidance, workspace access, and on-ground support.",
-      color: "#2196F3",
-    },
-    {
-      id: 4,
-      icon: "💡",
-      title: "Innovation Exchange Programs",
-      description:
-        "Engage in structured exchange programs to share cutting-edge technologies, business models, and R&D capabilities across borders.",
-      color: "#FFC107",
-    },
-    {
       id: 5,
       icon: "🎓",
       title: "Mentorship & Capacity Building",

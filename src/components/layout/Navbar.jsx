@@ -58,7 +58,7 @@ const Navbar = () => {
     >
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <h4 className="text-white">MP Global</h4>
+          <h4 className="text-white">MP GLOBAL</h4>
         </Link>
         <button
           className="navbar-toggler"

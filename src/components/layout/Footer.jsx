@@ -94,12 +94,12 @@ const Footer = () => {
               <h3>Contact Us</h3>
               <ul>
                 <li>
-                  <i className="fas fa-map-marker-alt mr-2"></i> MPIDC Bhawan,
-                  Arera Hills, Bhopal
+                  <i className="fas fa-map-marker-alt mr-2"></i> E07, 8th Floor,
+                  Bansal One, Bhopal 462016 MP, IN
                 </li>
                 <li>
                   <i className="fas fa-envelope mr-2"></i>{" "}
-                  exportcell@mpidc.co.in
+                  info@incubationmasters.com
                 </li>
                 <li>
                   <i className="fas fa-phone mr-2"></i> 0755-2577145
