@@ -2,6 +2,7 @@ import React from "react";
 
 import partner2 from "/partner/infobeans_logo.png";
 import partner3 from "/partner/logo.png";
+import partner4 from "/partner/imglobal.png";
 // import partner3 from "../../assets/images/partner/3.png";
 // import partner4 from "../../assets/images/partner/4.png";
 
@@ -9,6 +10,7 @@ const PartnersSection = () => {
   const partners = [
     { image: partner2, name: "Partner 2" },
     { image: partner3, name: "Partner 3" },
+    { image: partner4, name: "Partner 4" },
     // { image: partner3, name: "Partner 3" },
     // { image: partner4, name: "Partner 4" },
   ];

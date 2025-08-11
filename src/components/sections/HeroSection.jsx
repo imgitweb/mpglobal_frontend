@@ -7,7 +7,8 @@ const HeroSection = ({ useVideo = false }) => {
       id="home"
       style={{
         minHeight: "80vh",
-        background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)",
+        background:
+          "linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, #fff 100%)",
       }}
     >
       <div
@@ -40,7 +41,7 @@ const HeroSection = ({ useVideo = false }) => {
               className="position-absolute top-0 start-0 w-100 h-100"
               style={{
                 background:
-                  "linear-gradient(135deg, rgba(248, 152, 26, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%)",
+                  "linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, #fff 100%)",
               }}
             ></div>
           </div>

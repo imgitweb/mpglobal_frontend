@@ -1,45 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const MPGlobalServices = () => {
-  const [activeHover, setActiveHover] = useState(null);
-  const [activeFAQ, setActiveFAQ] = useState(null);
-
-  const services = [
-    {
-      id: 5,
-      icon: "🎓",
-      title: "Mentorship & Capacity Building",
-      description:
-        "Learn from global experts through mentorship, workshops, and training programs designed to accelerate startup growth and innovation.",
-      color: "#9C27B0",
-    },
-    {
-      id: 6,
-      icon: "🏢",
-      title: "Access to Incubation & Government Schemes",
-      description:
-        "Tap into startup incubators and benefit from bilateral government initiatives that support cross-border entrepreneurship and innovation.",
-      color: "#00BCD4",
-    },
-    {
-      id: 7,
-      icon: "🎯",
-      title: "Virtual and In-Person Networking Events",
-      description:
-        "Join curated events, webinars, and business delegations to meet potential collaborators, investors, and industry leaders.",
-      color: "#795548",
-    },
-    {
-      id: 8,
-      icon: "🌐",
-      title: "Cultural & Business Integration Support",
-      description:
-        "Get help navigating cultural nuances and business practices to ensure smooth integration and successful partnerships across markets.",
-      color: "#607D8B",
-    },
-  ];
-
   return (
     <div className="bg-light min-vh-100">
       {/* Services Section */}
@@ -91,91 +53,6 @@ const MPGlobalServices = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="row g-4">
-            {services.map((service) => (
-              <div key={service.id} className="col-lg-3 col-md-6">
-                <div
-                  className={`card h-100 border-0 shadow-sm position-relative overflow-hidden transition-all ${
-                    activeHover === service.id ? "shadow-lg" : ""
-                  }`}
-                  style={{
-                    transform:
-                      activeHover === service.id
-                        ? "translateY(-10px)"
-                        : "translateY(0)",
-                    transition: "all 0.3s ease-in-out",
-                    cursor: "pointer",
-                  }}
-                  onMouseEnter={() => setActiveHover(service.id)}
-                  onMouseLeave={() => setActiveHover(null)}
-                >
-                  {/* Left Border */}
-                  <div
-                    className="position-absolute top-0 start-0 h-100"
-                    style={{
-                      width: "4px",
-                      backgroundColor: service.color,
-                    }}
-                  />
-
-                  <div className="card-body p-4">
-                    {/* Icon */}
-                    <div className="mb-3">
-                      <span
-                        className="d-inline-flex align-items-center justify-content-center rounded-circle"
-                        style={{
-                          width: "60px",
-                          height: "60px",
-                          backgroundColor: service.color + "20",
-                          fontSize: "1.5rem",
-                        }}
-                      >
-                        {service.icon}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h5
-                      className="card-title fw-bold mb-3"
-                      style={{ color: service.color }}
-                    >
-                      {service.title}
-                    </h5>
-
-                    {/* Description */}
-                    <p className="card-text text-muted">
-                      {service.description}
-                    </p>
-                  </div>
-
-                  {/* Hover Effect Overlay */}
-                  <div
-                    className={`position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center ${
-                      activeHover === service.id ? "opacity-100" : "opacity-0"
-                    }`}
-                    style={{
-                      background: `linear-gradient(135deg, ${service.color}15, ${service.color}05)`,
-                      transition: "opacity 0.3s ease-in-out",
-                      pointerEvents: "none",
-                    }}
-                  >
-                    <div
-                      className="rounded-circle d-flex align-items-center justify-content-center"
-                      style={{
-                        width: "80px",
-                        height: "80px",
-                        backgroundColor: service.color,
-                        color: "white",
-                        fontSize: "2rem",
-                      }}
-                    >
-                      {service.icon}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
       <style jsx>{`
