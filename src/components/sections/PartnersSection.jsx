@@ -20,7 +20,7 @@ const PartnersSection = () => {
       <div className="container">
         <div className="section-header text-center">
           <h2>
-            Our <span className="highlight">Informative Partner</span>
+            Our <span className="highlight">Implementation Partner</span>
           </h2>
           <div className="mp-divider"></div>
           {/* <p className="section-subtitle">Supporting MP Art Propel's mission</p> */}
