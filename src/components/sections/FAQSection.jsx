@@ -118,7 +118,7 @@ const faqItems = {
       id: 10,
       question: "Who can I contact for more information?",
       answer: `Contact:
-      • exportcell@mpidc.co.in
+      • info@incubationmasters.com
       • 0755-2577145
       • Socials: LinkedIn, Instagram, YouTube, Facebook`,
     },
