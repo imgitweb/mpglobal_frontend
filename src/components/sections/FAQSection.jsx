@@ -249,7 +249,7 @@ const FAQSection = () => {
                   className="fas fa-envelope"
                   style={{ color: "#FF8C00", marginRight: "10px" }}
                 ></i>
-                <span>exportcell@mpidc.co.in</span>
+                <span>info@incubationmasters.com</span>
               </div>
               <div className="d-flex align-items-center">
                 <i
