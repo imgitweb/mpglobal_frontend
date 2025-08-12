@@ -7,8 +7,6 @@ const HeroSection = ({ useVideo = false }) => {
       id="home"
       style={{
         minHeight: "80vh",
-        background:
-          "linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, #fff 100%)",
       }}
     >
       <div
@@ -37,13 +35,7 @@ const HeroSection = ({ useVideo = false }) => {
               className="w-100 h-100"
               style={{ objectFit: "cover", opacity: 0.3 }}
             />
-            <div
-              className="position-absolute top-0 start-0 w-100 h-100"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, #fff 100%)",
-              }}
-            ></div>
+            <div className="position-absolute top-0 start-0 w-100 h-100"></div>
           </div>
         )}
       </div>
